@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Konwerter obrazu na tekst</title>
+
+	<!--CSS files-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/upload.css') }}">
+
+	<!--Javascript files-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/copy.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/word.js') }}"></script>
+	
+</head>
+<body>
+	<h1 class="heading center">Konwerter obrazu na tekst</h1>
+	<form class="center" id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+		<input type="file" name="file" style="color: black;"><br/><br/>
+		<input type="submit" name="send" value="upload" class="waves-effect waves-orange btn">
+		
+	</form>
+	
+</body>
+</html>
